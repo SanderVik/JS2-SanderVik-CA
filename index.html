@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Authentication</title>
     <link rel="stylesheet" href="dist/css/main.css" />
+    <script defer src="js/script.js"></script>
   </head>
   <body class="vh-100 d-flex flex-column justify-content-between">
     <main>
       <div class="container col d-flex flex-column align-items-center">
         <h1 class="header mt-5">SomberChat</h1>
         <div class="d-flex justify-content-center flex-column">
-          <form action="profile/index.html" class="">
+          <form action="profile/index.html" id="registration">
             <input
               class="mt-5 w-100 p-2 rounded-5"
               type="email"
               placeholder="Username or email address"
               required=""
+              id="email"
             />
             <input
               class="mt-5 p-2 w-100 rounded-5"
@@ -24,7 +26,16 @@
               placeholder="Password"
               minlength="8"
               required
+              id="password"
             />
+            <input
+            class="mt-5 p-2 w-100 rounded-5"
+            type="password"
+            placeholder="Confirm password"
+            minlength="8"
+            required
+            id="confirmPassword"
+          />
             <div class="btn w-100">
               <button href class="mt-5 rounded-5 w-25 p-2 btn btn-primary">
                 <input type="submit" value="Sign In" class="rounded-5 border-0 btn-primary btn" />
